@@ -20,6 +20,10 @@ h1 {
   grid-template-columns: repeat(10, 1fr);
   width: 500px;
 }
+/* .cell:nth-child(3n - 1) {
+  background-color: rgba(145, 129, 196, 0.25);
+} */
+
 #board {
   background-color: antiquewhite;
   background-color: transparent;
@@ -36,7 +40,21 @@ h1 {
   background-position: bottom center, center right, center, top right, top, left,
     center, bottom right, center left, center right;
   padding-right: 20px;
+  /* duration | easing-function | delay |
+iteration-count | direction | fill-mode | play-state | name */
+  animation: 1s ease-in-out infinite alternate shake;
   /* filter: invert(70%) sepia(120%) hue-rotate(90deg); */
+}
+
+@keyframes shake {
+  0% {
+    background-size: 50px, 65px, 80px, 70px, 65px, 90px, 100px, 80px, 120px,
+      120px;
+  }
+  100% {
+    background-size: 55px, 70px, 85px, 75px, 70px, 95px, 100px, 80px, 120px,
+      120px;
+  }
 }
 
 .yellow {
@@ -58,6 +76,7 @@ h1 {
   height: 50px;
   aspect-ratio: 1;
   border: 1px solid black;
+  animation: glow 1s infinite;
 }
 
 #mainDiv {
@@ -69,6 +88,8 @@ h1 {
   background-color: antiquewhite;
   min-width: 5rem;
   text-transform: uppercase;
+  max-width: 20ch;
+  text-align: center;
 }
 #di {
   display: flex;
@@ -88,6 +109,7 @@ h1 {
   min-width: fit-content;
   background-color: antiquewhite;
   text-transform: uppercase;
+  padding: 5px;
 }
 .button {
   background-color: antiquewhite;
@@ -100,4 +122,11 @@ h1 {
   gap: 100px;
   justify-content: center;
   align-items: center;
+}
+#obstacle {
+  background-color: antiquewhite;
+  min-width: 5rem;
+  text-transform: uppercase;
+  max-width: 20ch;
+  text-align: center;
 }

@@ -68,7 +68,7 @@ function rollDice() {
   let randomDice = Math.floor(Math.random() * 6 + 1);
   let rolled = document.getElementById("rolled");
   rolled.innerHTML = "";
-  rolled.append(`you have rolled :${randomDice}`);
+  rolled.textContent = `you have rolled : ${randomDice}`;
 
   move(randomDice, player1);
   move(randomDice, player2);
@@ -79,7 +79,7 @@ function rollDice() {
 
   if (player1.isPlaying) {
     turn.innerHTML = "";
-    turn.append("YELLOW PLAYS");
+    turn.textContent = "YELLOW PLAYS";
   } else {
     turn.innerHTML = "";
     turn.append("RED PLAYS");
@@ -126,46 +126,59 @@ function move(number, player) {
 
 let obstacle = document.getElementById("obstacle");
 function snakes(player) {
+  obstacle.textContent = "";
+
   if (player.positionX === 5 && player.positionY === 7) {
+    obstacle.textContent = `Oh no! A snake. ${player.class} moves down`;
     player.positionX = 4;
     player.positionY = 9;
   }
   if (player.positionX === 1 && player.positionY === 2) {
+    obstacle.textContent = `Oh no! A snake bit player ${player.class} moves down`;
     player.positionX = 0;
     player.positionY = 7;
   }
   if (player.positionX === 4 && player.positionY === 4) {
+    obstacle.textContent = `Oh no! A snake bit player ${player.class} moves down`;
     player.positionX = 5;
     player.positionY = 5;
   }
   if (player.positionX === 9 && player.positionY === 3) {
+    obstacle.textContent = `Oh no! A snake bit player ${player.class} moves down`;
     player.positionX = 9;
     player.positionY = 6;
   }
   if (player.positionX === 5 && player.positionY === 0) {
+    obstacle.textContent = `Oh no! A snake bit player ${player.class} moves down`;
     player.positionX = 4;
     player.positionY = 2;
   }
   if (player.positionX === 9 && player.positionY === 0) {
+    obstacle.textContent = `Oh no! A snake bit player ${player.class} moves down`;
     player.positionX = 8;
     player.positionY = 3;
   }
 }
 
 function ladders(player) {
+  obstacle.textContent = "";
   if (player.positionX === 8 && player.positionY === 9) {
+    obstacle.textContent = `Yes! ${player.class} found a ladder. You go up.`;
     player.positionX = 9;
     player.positionY = 7;
   }
   if (player.positionX === 1 && player.positionY === 6) {
+    obstacle.textContent = `Yes! ${player.class} found a ladder. You go up.`;
     player.positionX = 0;
     player.positionY = 3;
   }
   if (player.positionX === 4 && player.positionY === 6) {
+    obstacle.textContent = `Yes! ${player.class} found a ladder. You go up.`;
     player.positionX = 5;
     player.positionY = 3;
   }
   if (player.positionX === 9 && player.positionY === 6) {
+    obstacle.textContent = `Yes! ${player.class} found a ladder. You go up.`;
     player.positionX = 8;
     player.positionY = 3;
   }
