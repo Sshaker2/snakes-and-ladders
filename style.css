@@ -57,7 +57,7 @@ h1 {
   align-items: center;
   height: 50px;
   aspect-ratio: 1;
-  border: 2px solid black;
+  border: 1px solid black;
 }
 
 #mainDiv {
@@ -93,4 +93,11 @@ h1 {
   background-color: antiquewhite;
   text-transform: uppercase;
   padding: 5px;
+}
+#buttons {
+  display: flex;
+  flex-direction: column;
+  gap: 100px;
+  justify-content: center;
+  align-items: center;
 }

@@ -135,6 +135,8 @@ function snakes(player) {
     player.positionY = 7;
   }
   if (player.positionX === 4 && player.positionY === 4) {
+    player.positionX = 5;
+    player.positionY = 5;
   }
   if (player.positionX === 9 && player.positionY === 3) {
     player.positionX = 9;
