@@ -1,0 +1,88 @@
+body {
+  background-image: none;
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-image: url(Images/back1.jpg);
+}
+
+h1 {
+  font-family: "Samarkan", sans-serif;
+  font-size: 50px;
+  text-align: center;
+  margin-bottom: 0;
+  color: black;
+}
+
+#board {
+  display: grid;
+  grid-template-rows: repeat(10, 1fr);
+  grid-template-columns: repeat(10, 1fr);
+  width: 500px;
+}
+#board {
+  background-color: white;
+  background-image: url(Images/vecteezy_cobra_1208827.png),
+    url(Images/vecteezy_snake_1208884.png),
+    url(Images/vecteezy_snake_1208886.png),
+    url(Images/vecteezy_cobra_1208827.png),
+    url(Images/vecteezy_snake_1208884.png),
+    url(Images/vecteezy_cobra_1208827.png), url(Images/ladder4.png),
+    url(Images/ladder4.png), url(Images/ladder6.png), url(Images/ladder6.png);
+  background-repeat: no-repeat, no-repeat, no-repeat, no-repeat, no-repeat,
+    no-repeat, no-repeat, no-repeat, no-repeat, no-repeat;
+  background-size: 50px, 65px, 80px, 70px, 65px, 90px, 100px, 80px, 120px, 120px;
+  background-position: bottom center, center right, center, top right, top, left,
+    center, bottom right, center left, center right;
+  padding-right: 20px;
+}
+
+.yellow {
+  background-image: url(Images/player1.jpg);
+  background-size: 30px;
+  background-repeat: no-repeat;
+  background-position: center;
+}
+.red {
+  background-image: url(Images/player2.jpg);
+  background-size: 30px;
+  background-repeat: no-repeat;
+  background-position: center;
+}
+.cell {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 50px;
+  aspect-ratio: 1;
+  border: 1px solid black;
+}
+
+#mainDiv {
+  display: flex;
+  flex-wrap: nowrap;
+  justify-content: space-around;
+}
+#rolled {
+  background-color: antiquewhite;
+  min-width: 5rem;
+  text-transform: uppercase;
+}
+#di {
+  display: flex;
+  flex-wrap: nowrap;
+  flex-direction: column;
+  gap: 100px;
+  justify-content: center;
+  align-items: center;
+}
+
+#turn {
+  background-color: antiquewhite;
+  text-transform: uppercase;
+  text-align: center;
+}
+#dice {
+  max-width: fit-content;
+}
+.button {
+}
