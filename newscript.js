@@ -3,6 +3,19 @@ const grid = document.getElementById("board");
 const startButton = document.getElementById("start");
 const resetButton = document.getElementById("reset");
 const dice = document.getElementById("dice");
+const soundBtn = document.getElementById("sound");
+
+soundBtn.addEventListener("click", playSound);
+
+let audioElement = new Audio("./Audio/To My Groom.mp3");
+function playSound() {
+  if (audioElement.paused) {
+    audioElement.play();
+    audioElement.loop = true;
+  } else {
+    audioElement.pause();
+  }
+}
 
 const cells = [];
 let player1 = {
