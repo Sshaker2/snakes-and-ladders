@@ -18,3 +18,7 @@ Snakes and ladders is an ancient Indian game that was known as 'Moksha Pattam'. 
 - Numbering the game board
 - Getting the players to move from tile to tile
 - Getting the players to slide down the snake or up the ladder
+
+## The Game
+
+[Snakes and Ladders](https://sshaker2.github.io/snakes-and-ladders/)
